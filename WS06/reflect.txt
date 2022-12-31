@@ -1,0 +1,43 @@
+//Name: Jiseok Shim
+//Student ID: 122758170
+//Email: jshim13@myseneca.ca
+//Date: 2022-11-06
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshopsand assignments.
+
+Q1. Why do you need to deallocate the dynamically allocated memory in your vector?
+If I don't deallocate the dynamically allocated memory in vector "std::vector <Vehicle*> m_vehicles", Memory leak will happened.
+If memory leaks are happend, then its memory usage is increasing since all systems have limited amount of memory and memory is costly.
+In Autoshop.cpp I deallocate dynamically allocated memory here is my code below 
+for (auto i = m_vehicles.begin(); i != m_vehicles.end(); i++)
+        {
+			delete (*i);
+		}
+I have to write this code because the dynamically allocated memory was never deleted.
+
+Q2 - The load function prints an error message using "cerr" when the file cannot be opened. And if the file is successfully 
+opened, but the data in it is outside the category of the classification I set, the exception is managed through throw and catch. 
+For example, if a van type other than pickup, mini-bus, or camper appears in classifying the van type, the system "throw" 
+the exception. The throwed string is received as a catch and used to print an error message.
+
+Throw example)
+if(){
+else
+	{
+		throw string("Invalid record!");
+	}
+}
+Catch example)
+try(){
+catch (std::string mes) 
+        {
+			std::cout << mes << std::endl;
+		}
+}
+
+Another solution of throw and catch is use simply use if loop. Write exception in else part of the if loop. But this way is 
+manually and make code complex, and exception can not be sort. This is hard to understand your code.
+
+Q3 - Yes, We can use std::list <sdds::Vehicle*> instead of std::vector <sdds::Vehicle*>. We can use it if you change the code a
+little bit Vector and list have many similarities. But if we implement like this, whenever we allocate or deallocate m_vehicles
+it requires copy and write the whole data again. This is very inefficient. And especially in this workshop, it's preferred to use
+vector because we insert data sequentially and delete it sequentially.
