@@ -1,0 +1,14 @@
+/*
+Name: Jiseok Shim
+StudentID: 122758170
+Email: jshim13@myseneca.ca
+Section: OOP345NBB
+Date: 2022-07-17
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+
+Through this workshop, I understood and used various STL algorithms in more detail.
+I used a vector to store the Covid structure in m_infection using std::vector<Covid>m_infection.The vector helped store the structure by increasing the size variably, even though the size was not initially set.
+list<Covid>l; was also used to store Covid structures. When using a vector or list container, <vector> <list> should be included. For_each was also used to perform something in the same way for each element, circulating vectors sequentially.
+The STL algorithm is easier to read and simpler to look at than the manual loop function. This advantage is more advantageous in code review and finding bugs
+An error occurs when the file name is not valid while receiving the file name and instantiating the CovidCollection class. It is very important to detect errors and forward messages to users. The solution is try and catch. Read the file using the file name you entered, and if the file does not open, send an error message using Throw.
