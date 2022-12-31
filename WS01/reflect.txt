@@ -1,0 +1,31 @@
+/*
+Name: Jiseok Shim
+StudentID: 122758170
+Email: jshim13@myseneca.ca
+Section: OOP345NBB
+Date: 2022-05-22
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+
+Through this workshop, it was helpful to understand the external and internal linkage more clearly.
+External linkage can be used in other external modules, that are tax rates and special discounts.
+Example)
+
+extern double g_taxrate, g_dailydiscount;
+
+Other modules have access to g_taxrate and g_dailydiscount via #include "foodorder.h".
+However, internal linkage are declared and used within the same module.
+
+Example)
+double food_price;
+
+I used the static to implement the "counter" variable in the display function. Static is the display Calculate how many times 
+the function is called. The program allocates memory when compiling time. Static functions can be accessed by other class properties
+ and functions, and static variables within the function can be accessed. However, you cannot access other ordinary attributes of the class.
+
+There are some additions in Part 2. 
+In Part 1, an array of large sizes rather than the exact size was used and converted into a pointer. 
+It was possible to use an array of exact sizes without wasting memory. 
+Example)
+char food_description[25] -> char* food_description{};
+Because we used pointer types, we used constructors, allocation copies, and destructors.
