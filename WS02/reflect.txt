@@ -1,0 +1,25 @@
+/*
+Name: Jiseok Shim
+StudentID: 122758170
+Email: jshim13@myseneca.ca
+Section: OOP345NBB
+Date: 2022-05-29
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+
+Through this workshop2, I can understand and use fstream, copy constructor, copy assignment, move constructor ,move assignment.
+First, in "fstream" the file was read through getline and stored in a string type variable. 
+In order to read the total number of lines of the file, the file location indicator was moved to start point
+using the "seekg" function and the file was read again.
+I could measure the time it takes to implement the function using crono.
+example)
+std::chrono::steady_clock::time_point start_time;
+std::chrono::steady_clock::time_point end_time;
+
+I think the core of this workshop is move construction and movement alignment.
+The move() function changes the rvalue. The changed rvalue is moved by the move constructor I implemented.
+The move constructor receiving the rvalue is faster than the copy constructor
+Unlike copy assignment, move assignment are fast in terms of speed because they do not reallocate memory.
+
+We used size_t to use unsigned int.
+This type of object typically has pointers to dynamic memory and unsigned integers for tracking array size.
