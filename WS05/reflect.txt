@@ -1,0 +1,24 @@
+//Name: Jiseok Shim
+//Student ID: 122758170
+//Email: jshim13@myseneca.ca
+//Date: 2022-10-16
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshopsand assignments.
+
+I created and executed lambda expressions and function objects through this workshop5. A functor is an object that performs like a 
+function, except that it is faster and more performant than a normal function. It also has the property of storing states, 
+so function objects are used when a function that requires a state.The difference between a functor and a lambda expression does not 
+require an identifier. The Lambda expression is used only in the local area of the application and can be inline. Lambda can write code simply and easily.
+Lambda example)
+auto fixesPrice = [=](Book& book){}; 
+This lambda expression denotes capture by value.
+
+Exceptions are a very good way to manage errors. If there is an exception, the next step can be performed after jumping out of 
+the block when an error occurs. If there are no exceptions, you must add a step to output an error message when the file is not read and 
+reset the member variable.I think it is good to check the message using exception processing because we cannot predict all exceptions.
+Exception example)
+if (fileIn.is_open() == false) {
+			throw "Bad file name!";
+		}
+else
+{};
+If fileIn is not open the program display "Bad file name!".
